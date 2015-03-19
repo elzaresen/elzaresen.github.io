@@ -43,16 +43,22 @@
 
 .wrap p{
 	margin-top: 15vh;
-	font-size: 350px;
+	font-size: 300px;
 	font-family: icomoon;
 	color: black;
 	line-height: normal;
 }
 
-.wrap h1{
-	font-family: Oxygen;
+.wrap h3{
+	font-family: Segoe UI;
+	color: black;
+	margin-bottom: 2px;
+	font-size: 44px;
 }
 
-.wrap h3{
-	font-family: Source Sans Pro;
+.wrap h5{
+	font-family: Segoe UI Light;
+	color: black;
+	margin-top: 0px;
+	font-size: 27px;
 }
