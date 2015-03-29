@@ -76,7 +76,7 @@ body { font-family: "SegoeUINormal"; }
 .portfoliolist h1{
 	color: black;
 	margin-bottom: 75px;
-	font-size: 36px;
+	font-size: 28px;
 }
 
 .portfoliolist ul{
@@ -84,7 +84,7 @@ body { font-family: "SegoeUINormal"; }
 }
 
 .portfoliolist ul li{
-	font-size: 28px;
+	font-size: 24px;
 	list-style-type: none;
 }
 .portfoliolist ul li a{
