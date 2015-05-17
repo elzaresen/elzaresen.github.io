@@ -3,21 +3,63 @@
 <head>
 	<title>Elzar Esen</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
 <body>
 	<div class="wrap container text-center">
 		<div class="logoandtitle">
-			<p>&#xe600</p>
-			<h3>elzar<b>esen</b></h3>
-			<h5>SITE IS IN WORK</h5>	
+			<p class="animated flipzemY">&#xe600</p>
+			<h3 class="animated fadeInDown">elzar<b>esen</b></h3>
+			<h5 class="animated fadeInDown">SITE IS IN WORK</h5>	
 		</div>
 	</div>
 	<div class="portfoliolist container text-center">
-		<h1>CURRENT PORTFOLIO</h1>
+		<h1 class="portfolio-title">CURRENT PORTFOLIO</h1>
 		<ul>
-			<li><b><a href="http://roopacks.com">ROOPACKS.COM</a></b> - <i>bags store</i></li>
+			<li class="portfolio-item"><b><a href="http://roopacks.com">ROOPACKS.COM</a></b> - <i>bags store</i></li>
 		</ul>
 	</div>
+	<script type="text/javascript" src="dist/js/jquery.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.viewportchecker.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var i = 0;
+			var portfolioItem = $('.portfolio-item');
+			var portfolioTitle = $('.portfolio-title');
+
+			function animateCircle() {
+				$(portfolioTitle[i]).viewportChecker({
+					classToAdd: 'bt-visible animated fadeInUp', 
+					offset: 100, 
+					invertBottomOffset: true,
+					repeat: false, 
+					callbackFunction: function(elem, action){},
+					scrollHorizontal: false 
+				});
+
+				$(portfolioItem[i]).viewportChecker({
+					classToAdd: 'bt-visible animated fadeInUp', 
+					offset: 100, 
+					invertBottomOffset: true,
+					repeat: true, 
+					callbackFunction: function(elem, action){},
+					scrollHorizontal: false 
+				}).delay(800);
+				i++;
+				if (i <= portfolioItem.length) {
+					startAnimation();
+				}
+			}
+			function startAnimation() {
+				setTimeout(function () {
+					animateCircle();
+				}, 300);
+			}
+			portfolioTitle.addClass('bt-hidden');
+			portfolioItem.addClass('bt-hidden');
+			animateCircle(portfolioItem);
+		});
+	</script>
 </body>
 </html>

@@ -60,7 +60,7 @@ body { font-family: "SegoeUINormal"; }
 }
 
 .wrap, .portfoliolist{
-	min-height: 100vh;
+	min-height: 720px;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -89,7 +89,9 @@ body { font-family: "SegoeUINormal"; }
 }
 .portfoliolist ul li a{
 	color: black;
-
+}
+.portfolio-item{
+	margin-bottom: 25px;
 }
 
 .wrap p{
@@ -112,4 +114,11 @@ body { font-family: "SegoeUINormal"; }
 	color: black;
 	margin-top: 0px;
 	font-size: 27px;
+}
+
+.bt-hidden{
+     opacity:0;
+}
+.bt-visible{
+     opacity:1;
 }
