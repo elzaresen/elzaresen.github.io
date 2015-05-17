@@ -35,6 +35,17 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-duration: .75s;
   animation-duration: .75s;
 }
+
+@-webkit-keyframes flipzemY {
+  0% {
+    -webkit-transform: perspective(0px) rotate3d(90, 90, -5, 90deg);
+    transform: perspective(0px) rotate3d(90, 90, -5, 90deg);
+    /*-webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;*/
+    opacity: 0;
+  }
+}
+
 @keyframes flipzemY {
   0% {
     -webkit-transform: perspective(0px) rotate3d(90, 90, -5, 90deg);
@@ -51,7 +62,6 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: flipzemY;
   animation-name: flipzemY;
 }
-
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -83,4 +93,37 @@ Copyright (c) 2015 Daniel Eden
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
