@@ -21,45 +21,5 @@
 		</ul>
 	</div>
 	<script type="text/javascript" src="dist/js/jquery.js"></script>
-	<script type="text/javascript" src="dist/js/jquery.viewportchecker.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var i = 0;
-			var portfolioItem = $('.portfolio-item');
-			var portfolioTitle = $('.portfolio-title');
-
-			function animateCircle() {
-				$(portfolioTitle[i]).viewportChecker({
-					classToAdd: 'bt-visible animated fadeInUp', 
-					offset: 100, 
-					invertBottomOffset: true,
-					repeat: false, 
-					callbackFunction: function(elem, action){},
-					scrollHorizontal: false 
-				});
-
-				$(portfolioItem[i]).viewportChecker({
-					classToAdd: 'bt-visible animated fadeInUp', 
-					offset: 100, 
-					invertBottomOffset: true,
-					repeat: true, 
-					callbackFunction: function(elem, action){},
-					scrollHorizontal: false 
-				}).delay(800);
-				i++;
-				if (i <= portfolioItem.length) {
-					startAnimation();
-				}
-			}
-			function startAnimation() {
-				setTimeout(function () {
-					animateCircle();
-				}, 300);
-			}
-			portfolioTitle.addClass('bt-hidden');
-			portfolioItem.addClass('bt-hidden');
-			animateCircle(portfolioItem);
-		});
-	</script>
 </body>
 </html>
