@@ -20,20 +20,23 @@ path3.style.strokeDashoffset = length;
 path3.getBoundingClientRect();
 
 firstLine()
+
 secondLine()
+
 function firstLine() {
 	path.style.transition = path.style.WebkitTransition =
 	'stroke-dashoffset 1.5s ease-in-out';
 	path.style.strokeDashoffset = '0';
 	setTimeout(animateWords, 1000)
-
 }
+
 function secondLine() {
 	path2.style.transition = path2.style.WebkitTransition =
 	'stroke-dashoffset 1s ease-in-out';
 	path2.style.strokeDashoffset = '0';
 	setTimeout(thirdLine, 500)
 }
+
 function thirdLine() {
 	path3.style.transition = path3.style.WebkitTransition =
 	'stroke-dashoffset 1s ease-in-out';
@@ -41,6 +44,6 @@ function thirdLine() {
 }
 
 function animateWords(){
-	$('.animated').removeClass('hidden')
+	$('.animated').removeClass('invisible')
 	$('.animated').attr('class','animated fadeInDown')
 }

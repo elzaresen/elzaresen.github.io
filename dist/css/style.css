@@ -1,7 +1,5 @@
 body { font-family: "SegoeUILight"; }
 
-
-
 @font-face{
 	font-family: 'SegoeUILight';
 	src:url('https://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
@@ -12,9 +10,10 @@ body { font-family: "SegoeUILight"; }
 	font-weight: normal;
 	font-style: normal;
 }
-body { font-family: "SegoeUINormal"; }
 
-
+body {
+	font-family: "SegoeUINormal";
+}
 
 @font-face{
 	font-family: 'SegoeUINormal';
@@ -26,6 +25,7 @@ body { font-family: "SegoeUINormal"; }
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot?-dqkzos');
@@ -37,62 +37,28 @@ body { font-family: "SegoeUINormal"; }
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-one:before {
-	content: "\e600";
-}
-
-.icon-two:before {
-	content: "\e601";
-}
-
-.wrap{
+header{
 	height: 100vh;
-	min-height: 700px;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.wrap p{
-	margin-top: 15vh;
-	font-size: 300px;
-	font-family: icomoon;
-	color: black;
-	line-height: normal;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.wrap h1{
+header h1, header h3{
 	font-family: "SegoeUINormal";
 	color: black;
-	margin-bottom: 2px;
-	font-size: 44px;
+}
+header h3{
+	margin: 0;
 }
 
-.wrap h5{
-	font-family: "SegoeUILight";
-	color: black;
-	margin-top: 0px;
-	font-size: 27px;
-}
 .st1, .st2, .st3{
 	fill: none;
 	stroke: #000000;
 	stroke-width: 12;
 	animation: dash 1.5s linear forwards;
+}
+.invisible{
+	visibility: collapse;
 }
