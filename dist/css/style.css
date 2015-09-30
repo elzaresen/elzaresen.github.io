@@ -93,6 +93,6 @@ body { font-family: "SegoeUINormal"; }
 .st1, .st2, .st3{
 	fill: none;
 	stroke: #000000;
-	stroke-width: 8;
+	stroke-width: 12;
 	animation: dash 1.5s linear forwards;
 }
